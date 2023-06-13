@@ -26,6 +26,9 @@ jobs:
       - name: Create zip file
         run: zip "cem-opticompat-pack-$GITHUB_RUN_NUMBER.zip" ./*
         
+      - name: check
+        run: ls -la .
+        
       - name: Create Release
         uses: ncipollo/release-action@v1.12.0
         with:
