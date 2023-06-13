@@ -31,4 +31,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: "cem-opticompat-pack-*.zip"
-          tag_name: "v${{vars.GITHUB_RUN_NUMBER}}"
+          tag_name: "v${{ github.run_number }}"
