@@ -29,6 +29,6 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1.12.0
         with:
-          artifacts: "$GITHUB_WORKSPACE/cem-opticompat-pack-$GITHUB_RUN_NUMBER.zip"
+          artifacts: "cem-opticompat-pack-*.zip"
           commit: "main"
           tag: "v$GITHUB_RUN_NUMBER"
