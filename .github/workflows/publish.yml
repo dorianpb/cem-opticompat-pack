@@ -22,9 +22,13 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: zip cem-opticompat-pack.zip ./*
+      
+      - name: Create zip file
+        run: zip "cem-opticompat-pack-$GITHUB_RUN_NUMBER.zip" ./*
+        
       - name: Create Release
         uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: cem-opticompat-pack.zip
+          commit: "main"
+          tag: "v$GITHUB_RUN_NUMBER"
