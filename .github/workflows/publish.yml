@@ -25,6 +25,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: zip cem-opticompat-pack.zip $GITHUB_WORKSPACE/*
+        run: zip cem-opticompat-pack.zip ./*
       - name: Create Release
         uses: ncipollo/release-action@v1.12.0
