@@ -30,3 +30,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: "cem-opticompat-pack-*.zip"
+          tag_name: "v$GITHUB_RUN_NUMBER"
