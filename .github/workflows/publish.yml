@@ -27,8 +27,6 @@ jobs:
         run: zip "cem-opticompat-pack-$GITHUB_RUN_NUMBER.zip" ./*
         
       - name: Create Release
-        uses: ncipollo/release-action@v1.12.0
+        uses: softprops/action-gh-release@v1
         with:
-          artifacts: "cem-opticompat-pack-*.zip"
-          commit: "main"
-          tag: "v$GITHUB_RUN_NUMBER"
+          files: "cem-opticompat-pack-*.zip"
